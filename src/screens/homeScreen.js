@@ -62,9 +62,9 @@ text:{
 },
 searchButton: {
   backgroundColor: '#fff',
-  borderRadius: 20,
+  borderRadius: 25,
   width: Dimensions.get('window').width - 20,
-  height: 40,
+  height: 50,
   position: 'absolute',
   top: 20,
   paddingHorizontal: 96,
