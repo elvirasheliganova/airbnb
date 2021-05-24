@@ -1,30 +1,33 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image } from 'react-native'
 
-const Post = () => {
+const Post = (props) => {
+  
+  const post = props.post;
   return (
     <View style={styles.container}>
      {/*Image*/}
 
      <Image style={styles.image} source={{
-       uri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg'
+       uri: post.image
      }}/>
      
      {/*Bed and Bedroom*/}
-     <Text style={styles.bedBedroom}> 1 bed 1 Bedroom</Text>
+     <Text style={styles.bedBedroom}> {post.bed} bed {post.bedroom} Bedroom</Text>
 
      {/*Type and Description*/}
-     <Text style={styles.description} numberOfLines={2}>Lorem Ipsum is simplyLorem Ipsum is simply dummy text. Lorem Ipsum is simplyLorem Ipsum is simply dummy text</Text>
+     
+     <Text style={styles.description} numberOfLines={2}>{post.type}. {post.title}</Text>
      
 
      {/*Prices */}
      <Text style={styles.prices}> 
-       <Text style={styles.oldPrice}>$43/night</Text>
-       <Text style={styles.price}>  $36/</Text>
+       <Text style={styles.oldPrice}>${post.oldPrice}/night</Text>
+       <Text style={styles.price}>  ${post.newPrice}/</Text>
          <Text style={styles.nights}>night</Text>
        
      </Text>
-     <Text style={styles.totalPrice}>$247 total</Text>
+     <Text style={styles.totalPrice}>${post.totalPrice} total</Text>
      
      
      </View>
@@ -49,7 +52,7 @@ const styles = StyleSheet.create({
   } ,
   description: {
     marginBottom: 15,
-    lineHeight: 18
+    lineHeight: 18,
   },
   prices: {
     marginBottom: 15,
