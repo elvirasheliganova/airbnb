@@ -21,6 +21,7 @@ import HomeScreen from './src/screens/homeScreen';
 import Post from './src/components/Post';
 import feed from './assets/data/feed';
 import SearchResultsScreen from './src/screens/searchResults';
+import DestinationSearchScreen from './src/screens/destinationSearshScreen';
 
 
 
@@ -33,7 +34,7 @@ const App =  () => {
   return (
     <SafeAreaView>
       <StatusBar barStyle='dark-content' />
-      <SearchResultsScreen/>
+      <DestinationSearchScreen/>
     </SafeAreaView>
   );
 };
