@@ -5,8 +5,9 @@
  * @format
  * @flow strict-local
  */
-
+import 'react-native-gesture-handler';
 import React from 'react';
+import Router from './src/navigation/router'
 
 import {
   SafeAreaView,
@@ -17,25 +18,28 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import HomeScreen from './src/screens/homeScreen';
-import Post from './src/components/Post';
-import feed from './assets/data/feed';
-import SearchResultsScreen from './src/screens/searchResults';
-import DestinationSearchScreen from './src/screens/destinationSearshScreen';
 
 
 
-const post1 = feed[0];
+
+
+
+
+
+
 
 const App =  () => {
 
   
    
   return (
-    <SafeAreaView>
+    
+    <>
       <StatusBar barStyle='dark-content' />
-      <DestinationSearchScreen/>
-    </SafeAreaView>
+      <Router />
+    </>  
+    
+      
   );
 };
 

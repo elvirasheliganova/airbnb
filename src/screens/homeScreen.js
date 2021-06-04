@@ -1,16 +1,17 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image, ImageBackground, TouchableOpacity, Dimensions } from 'react-native';
 import Fontisto from 'react-native-vector-icons/Fontisto';
+import { useNavigation } from '@react-navigation/native';
 
 const HomeScreen = () => {
 
-  
+  const navigation = useNavigation()
 
   return (
     <View>
 
       {/* SearchBar*/}
-      <TouchableOpacity style={styles.searchButton} onPress={() => console.warn('Search Button Pressed')}>
+      <TouchableOpacity style={styles.searchButton} onPress={() => navigation.navigate("destination")}>
           <Fontisto name='search' size={24} color={'#f15454'} />
           <Text style={styles.searchButtonText}>Where are you going?</Text>
         </TouchableOpacity>
@@ -66,7 +67,7 @@ searchButton: {
   width: Dimensions.get('window').width - 20,
   height: 50,
   position: 'absolute',
-  top: 20,
+  top: 50,
   paddingHorizontal: 96,
   zIndex: 100,
   alignSelf: 'center',
