@@ -3,49 +3,53 @@ import { View, Text, TextInput, StyleSheet, FlatList, TouchableOpacity } from 'r
 import searchResults from "../../assets/data/search"
 import Entypo from "react-native-vector-icons/Entypo"
 import { useNavigation } from '@react-navigation/native'
+import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete'
+import SuggestionRow from '../components/suggestionRow'
 
 
 const DestinationSearchScreen = () => {
 
-  const [inputText, setInputText] = useState('');
+  
   const navigation = useNavigation()
 
   return (
     <View style={styles.root}>
-      {/* Input compoinent */}
-      <TextInput 
-        style={styles.textIput}
-        placeholder="Where are you going?"
-        value={inputText}
-        onChange={setInputText}
+      <View style={{height: 350}}>
+        <GooglePlacesAutocomplete
+        placeholder='Where are you going?'
+        onPress={(data, details = null) => {
+          // 'details' is provided when fetchDetails = true
+          console.log(data, details);
+          navigation.navigate('guests')
+        }}
+        query={{
+          key: 'AIzaSyBYdBZXcjFBhbES8OyjxX0x3AZuUB8xDHk',
+          language: 'en',
+          types: '(cities)'
+        }}
+        style={{
+          textInput: styles.textInput
+        }}
+        suppressDefaultStyles
+        renderRow={(item) => <SuggestionRow item={item} />} 
       />
-      <FlatList 
-      data={searchResults}
-      renderItem={({item}) => (
-        <TouchableOpacity 
-        style={styles.row}
-        onPress={() => navigation.navigate("guests")}>
-          <View style={styles.iconContainer}>
-            <Entypo name="location-pin" size={35} />
-          </View>
-          <Text style={styles.locationText}>{item.description}</Text>
-        </TouchableOpacity>
-      )}
-      />
-
-
-      {/* List of Destinations */}
+    </View>
+     
 
     </View>
   )
 }
 const styles = StyleSheet.create({
   root: {
-    margin: 20
+    padding: 20,
+    height: '100%',
+    backgroundColor: 'white'
+
   },
   textInput: {
     fontSize: 24,
     marginBottom: 20,
+    marginTop: 60,
 
   },
   row: {
