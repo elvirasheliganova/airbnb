@@ -2,6 +2,7 @@ import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import HomeScreen from '../screens/homeScreen'
 import SearchResultsScreen from '../screens/searchResultsScreen'
+import SearchResultsTabNavigator from './searchResultsTabNavigator'
 
 const Stack = createStackNavigator()
 
@@ -9,7 +10,7 @@ const ExploreNavigator = () => {
 
   
   return (
-    <Stack.Navigator>
+    <Stack.Navigator >
       <Stack.Screen 
       name="Welcome"
       component={HomeScreen}
@@ -19,10 +20,8 @@ const ExploreNavigator = () => {
         />
           <Stack.Screen 
       name="Search Results"
-      component={SearchResultsScreen}
-      options={{
-        headerShown: false
-      }}
+      component={SearchResultsTabNavigator}
+      
         />
     </Stack.Navigator>
     
