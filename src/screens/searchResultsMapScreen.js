@@ -2,7 +2,9 @@ import React, {useState} from 'react'
 import { View, Text } from 'react-native'
 import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps'
 import CustomMarker from '../components/CustomMarker'
+
 import places from '../../assets/data/feed'
+import PostCaruselItem from '../components/PostCaruselItem'
 
 const SearchResultsMapScreen = (props) => {
 
@@ -26,6 +28,11 @@ const SearchResultsMapScreen = (props) => {
        isSelected={place.id === selectedPlaceId}
        onPress={() => setSelectedPlaceId(place.id)} />)}
     </MapView>
+    <View style={{position: 'absolute', bottom: 40}}>
+      <PostCaruselItem post={places[0]} />
+    </View>
+
+     
     </View>
   )
 }

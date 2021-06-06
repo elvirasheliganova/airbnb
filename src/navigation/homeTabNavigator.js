@@ -22,8 +22,8 @@ const HomeTabNavigator = () => {
     }}>
       <Tab.Screen
       name={"Explore"}
-      //component={ExploreNavigator}
-      component={SearchResultsMapScreen}
+      component={ExploreNavigator}
+      //component={SearchResultsMapScreen}
       options={{
         tabBarIcon: ({color}) => (
           <Fontisto name='search' size={25} color={color} />
