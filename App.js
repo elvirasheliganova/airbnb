@@ -8,30 +8,10 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import Router from './src/navigation/router'
-
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-
-
-
-
-
-
-
-
-
+import {StatusBar} from 'react-native'
 
 const App =  () => {
-
-  
-   
+ 
   return (
     
     <>
