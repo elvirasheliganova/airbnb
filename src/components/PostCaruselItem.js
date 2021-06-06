@@ -39,8 +39,18 @@ const PostCaruselItem = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 120,
-    padding: 5
+    height: 140,
+    padding: 10,
+    shadowColor: "#000",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.30,
+    shadowRadius: 4.65,
+    
+    elevation: 8,
    
     
   },
@@ -57,13 +67,13 @@ const styles = StyleSheet.create({
    
   },
   bedBedroom: {
-    fontSize: 16,
+    fontSize: 12,
     color: '#5b5b5b',
     marginVertical: 10,
   } ,
   description: {
     marginBottom: 15,
-    lineHeight: 18,
+    fontSize: 14
   },
   prices: {
     marginBottom: 15,
