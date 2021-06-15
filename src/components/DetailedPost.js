@@ -1,20 +1,11 @@
 import React from 'react'
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
-import {  useNavigation } from '@react-navigation/native'
+import { View, Text, StyleSheet, Image, SafeAreaView, ScrollView } from 'react-native'
 
-
-const Post = (props) => {
+const DetailedPost = (props) => {
   
   const post = props.post;
-
-  const navigation = useNavigation()
-  const goToPostPage = () => {
-    navigation.navigate('Post', {postId: post.id})
-  }
   return (
-    <TouchableOpacity 
-    onPress={goToPostPage}
-    style={styles.container}>
+    <View style={styles.container}>
      {/*Image*/}
 
      <Image style={styles.image} source={{
@@ -31,15 +22,19 @@ const Post = (props) => {
 
      {/*Prices */}
      <Text style={styles.prices}> 
-       <Text style={styles.oldPrice}>${post.oldPrice}/night</Text>
+       
        <Text style={styles.price}>  ${post.newPrice}/</Text>
          <Text style={styles.nights}>night</Text>
        
      </Text>
-     <Text style={styles.totalPrice}>${post.totalPrice} total</Text>
+     <SafeAreaView style={styles.descriptionContainer}>
+     <ScrollView 
+     showsVerticalScrollIndicator={false}>
+     <Text style={styles.longDescription}>{post.description}</Text>
+     </ScrollView>
+     </SafeAreaView>
      
-     
-     </TouchableOpacity>
+     </View>
   )
 }
 
@@ -60,6 +55,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   } ,
   description: {
+    fontSize: 16,
     marginBottom: 15,
     lineHeight: 18,
   },
@@ -74,11 +70,17 @@ const styles = StyleSheet.create({
   price: {
     fontWeight: 'bold',
   },
-  totalPrice: {
+  descriptionContainer: {
+    height: 350
+  },
+  
+  longDescription: {
 
+    fontSize: 16,
+    lineHeight: 24,
   },
   
 })
 
 
-export default Post
+export default DetailedPost

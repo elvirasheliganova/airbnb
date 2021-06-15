@@ -10,6 +10,7 @@ import React from 'react';
 import Router from './src/navigation/router'
 import {StatusBar} from 'react-native'
 
+
 const App =  () => {
  
   return (

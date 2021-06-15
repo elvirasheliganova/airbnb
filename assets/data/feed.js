@@ -4,6 +4,9 @@ export default [
     image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg',
     type: 'Private Room',
     title: 'Bright room in the heart of the city',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis imperdiet elit tortor. Nulla placerat lobortis vehicula. Quisque a mattis massa. Phasellus porta mauris eu risus semper, nec blandit mi elementum. Proin vel felis dui. In ut justo ultricies, egestas diam eget, elementum tortor. Curabitur in maximus nisl, non lacinia lorem. Vivamus faucibus pharetra condimentum. Sed tempor lorem justo, nec ultricies velit commodo quis. Sed vulputate mauris et diam ultrices, nec ultricies lorem luctus. Integer venenatis sapien eu magna commodo, ornare tempus nisl cursus. Nullam et quam libero. Mauris ut massa vitae neque condimentum elementum at finibus libero. Quisque quis erat a augue posuere euismod sit amet sit amet sem.',
+
+    
     bed: 2,
     bedroom: 3,
     oldPrice: 25,
@@ -19,6 +22,8 @@ export default [
     image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/2.jpg',
     type: 'Entire Flat',
     title: 'NEW lux. apartment in the center of Santa Cruz',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis imperdiet elit tortor. Nulla placerat lobortis vehicula. Quisque a mattis massa. Phasellus porta mauris eu risus semper, nec blandit mi elementum. Proin vel felis dui. In ut justo ultricies, egestas diam eget, elementum tortor. Curabitur in maximus nisl, non lacinia lorem. Vivamus faucibus pharetra condimentum. Sed tempor lorem justo, nec ultricies velit commodo quis. Sed vulputate mauris et diam ultrices, nec ultricies lorem luctus. Integer venenatis sapien eu magna commodo, ornare tempus nisl cursus. Nullam et quam libero. Mauris ut massa vitae neque condimentum elementum at finibus libero. Quisque quis erat a augue posuere euismod sit amet sit amet sem.',
+
     bed: 3,
     bedroom: 2,
     oldPrice: 76,
@@ -34,6 +39,8 @@ export default [
     image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/3.jpg',
     type: 'Private Property',
     title: 'Green House Santa Cruz',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis imperdiet elit tortor. Nulla placerat lobortis vehicula. Quisque a mattis massa. Phasellus porta mauris eu risus semper, nec blandit mi elementum. Proin vel felis dui. In ut justo ultricies, egestas diam eget, elementum tortor. Curabitur in maximus nisl, non lacinia lorem. Vivamus faucibus pharetra condimentum. Sed tempor lorem justo, nec ultricies velit commodo quis. Sed vulputate mauris et diam ultrices, nec ultricies lorem luctus. Integer venenatis sapien eu magna commodo, ornare tempus nisl cursus. Nullam et quam libero. Mauris ut massa vitae neque condimentum elementum at finibus libero. Quisque quis erat a augue posuere euismod sit amet sit amet sem.',
+
     bed: 2,
     bedroom: 1,
     oldPrice: 64,
@@ -49,6 +56,8 @@ export default [
     image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/4.jpg',
     type: 'Entire Flat',
     title: 'Typical canarian house',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis imperdiet elit tortor. Nulla placerat lobortis vehicula. Quisque a mattis massa. Phasellus porta mauris eu risus semper, nec blandit mi elementum. Proin vel felis dui. In ut justo ultricies, egestas diam eget, elementum tortor. Curabitur in maximus nisl, non lacinia lorem. Vivamus faucibus pharetra condimentum. Sed tempor lorem justo, nec ultricies velit commodo quis. Sed vulputate mauris et diam ultrices, nec ultricies lorem luctus. Integer venenatis sapien eu magna commodo, ornare tempus nisl cursus. Nullam et quam libero. Mauris ut massa vitae neque condimentum elementum at finibus libero. Quisque quis erat a augue posuere euismod sit amet sit amet sem.',
+
     bed: 4,
     bedroom: 3,
     oldPrice: 120,
