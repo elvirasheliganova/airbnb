@@ -9,7 +9,7 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import Router from './src/navigation/router'
 import {StatusBar} from 'react-native'
-
+import { withAuthenticator } from 'aws-amplify-react-native'
 
 const App =  () => {
  
@@ -26,4 +26,4 @@ const App =  () => {
 
 
 
-export default App;
+export default withAuthenticator(App);
