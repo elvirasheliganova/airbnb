@@ -8,9 +8,11 @@ const DetailedPost = (props) => {
     <View style={styles.container}>
      {/*Image*/}
 
-     <Image style={styles.image} source={{
-       uri: post.image
-     }}/>
+     <Image 
+       style={styles.image} 
+       source={{uri: post.image}}
+       
+     />
      
      {/*Bed and Bedroom*/}
      <Text style={styles.bedBedroom}> {post.bed} bed {post.bedroom} Bedroom</Text>
