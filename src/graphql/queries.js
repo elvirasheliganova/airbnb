@@ -1,18 +1,19 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getTodo = /* GraphQL */ `
-  query GetTodo($id: ID!) {
-    getTodo(id: $id) {
+export const getPost = /* GraphQL */ `
+  query GetPost($id: ID!) {
+    getPost(id: $id) {
       id
       image
+      type
       title
       description
       bed
       bedroom
+      maxGuests
       oldPrice
       newPrice
-      maxGuests
       latitude
       longitude
       createdAt
@@ -20,23 +21,24 @@ export const getTodo = /* GraphQL */ `
     }
   }
 `;
-export const listTodos = /* GraphQL */ `
-  query ListTodos(
-    $filter: ModelTodoFilterInput
+export const listPosts = /* GraphQL */ `
+  query ListPosts(
+    $filter: ModelPostFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listTodos(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listPosts(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         image
+        type
         title
         description
         bed
         bedroom
+        maxGuests
         oldPrice
         newPrice
-        maxGuests
         latitude
         longitude
         createdAt
