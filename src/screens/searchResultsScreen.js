@@ -1,14 +1,23 @@
 import React, {useEffect, useState} from 'react'
 import { View, Text, FlatList } from 'react-native'
-import { API, graphqlOperation } from 'aws-amplify';
 import Post from '../components/Post';
+
+import { API, graphqlOperation } from 'aws-amplify';
 import { listPosts } from '../graphql/queries';
 
 
 
-const SearchResultsScreen = () => {
 
-  const [posts, setPosts] = useState();
+
+const SearchResultsScreen = (props) => {
+
+  const {guests}  = props;
+  
+  
+
+  const [posts, setPosts] = useState([]);
+  
+  
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -16,8 +25,15 @@ const SearchResultsScreen = () => {
       try {
  
         const postsResult = await API.graphql(
-          graphqlOperation(listPosts)
+        graphqlOperation(listPosts, {
+          filter: {
+            maxGuests: {
+              ge: guests
+            }
+          }
+        })
         )
+
         setPosts(postsResult.data.listPosts.items);
 
       } catch (e){

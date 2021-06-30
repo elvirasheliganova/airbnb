@@ -11,6 +11,7 @@ const DestinationSearchScreen = () => {
 
   
   const navigation = useNavigation()
+ 
 
   return (
     <View style={styles.root}>
