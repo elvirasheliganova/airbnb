@@ -23,7 +23,9 @@ const Router = () => {
         name={"destination"}
         component={DestinationSearchScreen}
         options={{
-          title: 'Where are you going?'
+          
+        
+          title: ''
         }} />
 
        <Stack.Screen

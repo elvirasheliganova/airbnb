@@ -12,13 +12,14 @@ const HomeScreen = () => {
 
       {/* SearchBar*/}
       <TouchableOpacity style={styles.searchButton} onPress={() => navigation.navigate("destination")}>
-          <Fontisto name='search' size={24} color={'#f15454'} />
-          <Text style={styles.searchButtonText}>Where are you going?</Text>
+         
+          <Text style={styles.searchButtonText}>Start your journey</Text>
+          <Fontisto name='arrow-right' size={15} color='#fff' />
         </TouchableOpacity>
 
-      <ImageBackground source={require('../../assets/images/wallpaper.jpg')} style={styles.image} >
+      <ImageBackground source={require('../../assets/images/opatijaWelcome.jpg')} style={styles.image} >
       {/* Title*/}
-        <Text style={styles.title}>Go Near </Text>
+        <Text style={styles.title}>Enjoy Opatija </Text>
 
       {/* Button*/}
 
@@ -34,8 +35,8 @@ const styles = StyleSheet.create({
   image: {
     
     width: '100%',
-    height: 500,
-    justifyContent: 'center',
+    height: 800,
+    justifyContent: 'flex-start',
    resizeMode: 'cover',
 },
 title: {
@@ -44,6 +45,7 @@ title: {
     color: '#fff',
     width: '70%',
     marginLeft: 20,
+    marginTop: 70,
     lineHeight: 85
 }, 
 
@@ -62,23 +64,31 @@ text:{
   fontWeight: '500',
 },
 searchButton: {
-  backgroundColor: '#fff',
-  borderRadius: 25,
-  width: Dimensions.get('window').width - 20,
+  backgroundColor:  'rgba(81, 153, 155, 1)',
+  borderRadius: 15,
+  borderColor: '#b3eae4cc',
+  borderWidth: 1,
+  width: Dimensions.get('window').width - 140,
   height: 50,
   position: 'absolute',
-  top: 50,
-  paddingHorizontal: 96,
+  bottom: 100,
+  
   zIndex: 100,
   alignSelf: 'center',
   justifyContent: 'space-between',
   alignItems: 'center',
+  paddingHorizontal: 25,
   flexDirection: 'row',
+
+
+
   
 },
 searchButtonText: {
   
-  fontWeight: '500',
+  fontWeight: '600',
+  color: '#fff',
+  fontSize: 20,
 }
 })
 

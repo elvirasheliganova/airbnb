@@ -20,7 +20,12 @@ const HomeTabNavigator = () => {
   return (
     <Tab.Navigator
     tabBarOptions={{
-      activeTintColor: '#f15454'
+      activeTintColor: '#6ab2aa',
+      style: {
+        backgroundColor: '#131a1a',
+        height: 80,
+        paddingTop: 15,
+      },
     }}>
       <Tab.Screen
       name={"Explore"}
